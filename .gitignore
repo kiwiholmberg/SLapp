@@ -1,0 +1,4 @@
+# Ignore waf build tool generated files
+.waf*
+build
+.lock-waf*

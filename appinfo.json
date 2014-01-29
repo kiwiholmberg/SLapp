@@ -1,0 +1,19 @@
+{
+  "uuid": "041b2e2a-b9de-4874-9ddf-323e1cba9d86",
+  "shortName": "SLapp",
+  "longName": "SLapp",
+  "companyName": "Kiwi",
+  "capabilities": [ "configurable" ],
+  "versionCode": 1,
+  "versionLabel": "1.0.0",
+  "watchapp": {
+    "watchface": false
+  },
+  "appKeys": {
+    "buses": 0,
+    "refresh": 1
+  },
+  "resources": {
+    "media": []
+  }
+}

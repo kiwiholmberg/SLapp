@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SLapp config</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Inställningar</h1>
+  	<form type="submit" class="config-form" role="form">
+      <div class="form-group">
+        <label>Trafikslag</label>
+        <ul class="nav nav-pills trafic">
+          <li class="active"><a href="#">Buss</a></li>
+          <li class="active"><a href="#">Pendel</a></li>
+          <li><a href="#">Tunnelbana</a></li>
+        </ul>
+      </div>
+      <div class="form-group">
+  		  <label for="station-id">Station att bevaka</label>
+	  	  <input type="text" id="station-id" class="glyphicon-search form-control input-lg station-id">
+      </div>
+  	</form>
+    <hr>
+    <div class="btn-group latest-stops">
+      <button class="btn btn-default btn-lg dropdown-toggle latest-stops-button" type="button" data-toggle="dropdown">
+        Senaste platser <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu latest-stops-container">
+        <li data-station-id="1950">Örby skola</li>
+        <li data-station-id="1708">Örby slott</li>
+      </ul>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-2.0.3.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

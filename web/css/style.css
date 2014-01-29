@@ -1,0 +1,12 @@
+body {
+	padding: 0 15px;
+	
+	background-color:rgba(190, 190, 194, 0.4);
+	
+}
+.trafic li a {
+	background-color: #eee;
+}
+.latest-stops, .latest-stops .latest-stops-button, .latest-stops .latest-stops-container {
+	width: 100%;
+}
