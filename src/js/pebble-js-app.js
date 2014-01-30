@@ -3,6 +3,7 @@
 function Laxen(){
 	console.log('Loading laxen...')
 	var self = this
+    self.maxMessageSize = 512
 
 	//API: SL Realtid
 	this.apiKey = 'zYYr2GH36INL6rV9lbGrmuoDTNFl2wnh' 
@@ -20,11 +21,6 @@ function Laxen(){
         self.attachEvents()
 	}
     this.attachEvents = function() {
-        /*
-        Pebble.addEventListener("appmessage", function(e) {
-            console.log(e.payload)
-        })
-*/
         Pebble.addEventListener('showConfiguration', function(e) {
             Pebble.openURL('https://kiwifoto.se/pebble/pebble.html')
         })
@@ -85,10 +81,10 @@ function Laxen(){
             text = text + d.Destination + ' ' + d.DisplayTime + '\n'
             busList.push(d.Destination + ' ' + d.DisplayTime)
         };
-        var buses = busList.join('\n')
+        var buses = busList.join('\n').substring(0, self.maxMessageSize) //Make a string with line breaks and make shure it's not to large.
         console.log('Message size: '+ String(buses.length))
         Pebble.sendAppMessage({
-            'buses': buses // Make a string of the list separated by # (Pebble cant handle lists)
+            'buses': buses
         });
         //Pebble.showSimpleNotificationOnPebble('Bussar!', text) //Temporary solution for sending data to pebble.
     }

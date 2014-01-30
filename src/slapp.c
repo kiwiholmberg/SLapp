@@ -5,7 +5,7 @@
 static Window *window;
 
 static TextLayer *list_layer;
-static char buses[256];
+static char buses[512];
 
 enum {
   BUSES_KEY = 0x0,
@@ -48,7 +48,7 @@ static void in_received_handler(DictionaryIterator *iter, void *context) {
   Tuple *buses_tuple = dict_find(iter, BUSES_KEY);
   if (buses_tuple) {
     vibes_double_pulse();
-    strncpy(buses,buses_tuple->value->cstring, 256);
+    strncpy(buses,buses_tuple->value->cstring, 512);
     text_layer_set_text(list_layer, buses);
   }
 }
